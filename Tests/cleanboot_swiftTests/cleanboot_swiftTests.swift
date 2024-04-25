@@ -1,7 +1,7 @@
 import XCTest
-@testable import cleanboot_iOS
+@testable import cleanboot_swift
 
-final class cleanboot_iOSTests: XCTestCase {
+final class cleanboot_swiftTests: XCTestCase {
     func testExample() throws {
         // XCTest Documentation
         // https://developer.apple.com/documentation/xctest
