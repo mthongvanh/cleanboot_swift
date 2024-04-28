@@ -11,6 +11,7 @@ public protocol UseCase<ResultType, Parameters> {
     associatedtype ResultType
     associatedtype Parameters
     
+    @available(iOS 13.0.0, *)
     func execute(params: Parameters) async throws -> UseCaseResult<ResultType>
 }
 
