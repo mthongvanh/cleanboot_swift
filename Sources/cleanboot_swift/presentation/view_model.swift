@@ -43,7 +43,6 @@ open class ViewModel<ViewModelType> {
         }
     }
     
-    @available(iOS 13.0.0, *)
     open func prepareData() async {
         // update state before performing async operation
         loadState = .loading
