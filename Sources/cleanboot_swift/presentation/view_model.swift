@@ -6,10 +6,13 @@
 //
 
 import Foundation
+import SwiftUICore
 
 public typealias OnModelReady<ViewModelType> = (ViewModelType) -> Void
 public typealias OnModelUpdate<ViewModelType> = (ViewModelType) -> Void
 
+@available(iOS 17.0, *)
+@Observable
 open class ViewModel<ViewModelType> {
     
     public init(
@@ -18,6 +21,8 @@ open class ViewModel<ViewModelType> {
     ) {
         self.onModelReady = onModelReady
         self.onModelUpdate = onModelUpdate
+        
+        self.loadState = .initialized
         
         if #available(iOS 13.0, *) {
             Task.init {
